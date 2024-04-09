@@ -1,10 +1,16 @@
+# name of yml 
 name: learn-github-actions
+# name of workflow runs  
 run-name: ${{ github.actor }} is learning GitHub Actions
+# specifies of trigger
 on: [push]
 jobs:
+  # job name 
   check-bats-version:
     runs-on: ubuntu-latest
+    # job's sons
     steps:
+    # uses what??? v4?? what???
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
